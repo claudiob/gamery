@@ -17,7 +17,9 @@ export default class extends Controller {
 	isOnline(): boolean {
 		const temp = OnlinePresenceSource.getInstance()
 		const onlineUserIds = OnlinePresenceSource.getInstance().onlineUserIds
-		return onlineUserIds.includes(this.idValue)
+		return onlineUserIds.indexOf(this.idValue) > -1
+		// NOTE: es2016 introduces the following syntax:
+		// return onlineUserIds.includes(this.idValue)
 	}
 
 	adjustIndicator(): void {
