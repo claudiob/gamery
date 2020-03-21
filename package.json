@@ -7,7 +7,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
     "bulma": "^0.8.0",
-    "stimulus": "^1.1.1",
+    "stimulus": "https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/stimulus.tar.gz",
     "ts-loader": "^6.2.1",
     "turbolinks": "^5.2.0",
     "typescript": "^3.8.3"

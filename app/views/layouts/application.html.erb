@@ -16,9 +16,14 @@
 
     <div>
       Users:
-      <ul data-controller="users">
+      <ul>
         <% User.find_each do |user| %>
-          <li><%= user.email %></li>
+          <li data-controller="user"
+              data-user-id-value="<%= user.id %>"
+              data-user-online-class="has-text-success"
+              data-user-target="indicator"
+              class="<%= "has-text-success" if OnlinePresence.include?(user.id) %>"
+          ><%= user.email %></li>
         <% end %>
       </ul>
     </div>
