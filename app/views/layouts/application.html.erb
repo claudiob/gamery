@@ -16,7 +16,7 @@
 
     <div>
       Users:
-      <ul>
+      <ul data-controller="users">
         <% User.find_each do |user| %>
           <li><%= user.email %></li>
         <% end %>
